@@ -1,10 +1,13 @@
 {
-  "name": "9.7_h5",
+  "name": "myproject",
   "version": "1.0.0",
   "description": "9.7H5实训\r 1111111",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev_mac": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
+    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
+    "dist_mac": "WEBPACK_ENV=online webpack -p",
+    "dist": "set WEBPACK_ENV=online && webpack -p"
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,13 @@
   "devDependencies": {
     "css-loader": "^3.2.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.0.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
+    "url-loader": "^2.1.0",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
   }
 }
